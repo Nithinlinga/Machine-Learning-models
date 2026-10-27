@@ -1,0 +1,74 @@
+{
+  "input_columns": [
+    "gender",
+    "SeniorCitizen",
+    "Partner",
+    "Dependents",
+    "tenure",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod",
+    "MonthlyCharges",
+    "TotalCharges"
+  ],
+  "numeric_columns": [
+    "SeniorCitizen",
+    "tenure",
+    "MonthlyCharges",
+    "TotalCharges"
+  ],
+  "categorical_columns": [
+    "gender",
+    "Partner",
+    "Dependents",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod"
+  ],
+  "target": "Churn",
+  "target_mapping": {
+    "No": 0,
+    "Yes": 1
+  },
+  "dataset_shape": [
+    7043,
+    21
+  ],
+  "input_feature_count": 19,
+  "train_rows": 5634,
+  "test_rows": 1409,
+  "test_size": 0.2,
+  "random_state": 42,
+  "models": {
+    "Logistic Regression": "LogisticRegression(max_iter=1000, random_state=42)",
+    "Decision Tree": "DecisionTreeClassifier(max_depth=6, min_samples_leaf=5, random_state=42)",
+    "KNN": "KNeighborsClassifier(n_neighbors=15)",
+    "Naive Bayes": "GaussianNB()",
+    "SVM": "SVC(probability=True, random_state=42)"
+  },
+  "artifact_files": {
+    "Logistic Regression": "logistic_regression.joblib",
+    "Decision Tree": "decision_tree.joblib",
+    "KNN": "knn.joblib",
+    "Naive Bayes": "naive_bayes.joblib",
+    "SVM": "svm.joblib"
+  }
+}
